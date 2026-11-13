@@ -1,0 +1,131 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #080817;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  background:
+    radial-gradient(circle at 30% 40%, #5424a8, transparent 35%),
+    radial-gradient(circle at 70% 60%, #142c83, transparent 35%);
+  animation: move 12s infinite alternate ease-in-out;
+  z-index: -2;
+}
+
+@keyframes move {
+  to {
+    transform: translate(10%, -8%) scale(1.2);
+  }
+}
+
+header {
+  text-align: center;
+  padding: 90px 20px 60px;
+}
+
+h1 {
+  font-size: clamp(40px, 9vw, 80px);
+  margin: 0;
+  background: linear-gradient(
+    90deg, maroon, #60a5fa,maroon
+  );
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200%;
+  }
+}
+
+header p {
+  color: #c4c4e8;
+  font-size: 18px;
+}
+
+section {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 30px;
+  width: 90%;
+  background: #ffffff0c;
+  border: 1px solid #ffffff20;
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  animation: appear 1s ease both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  color: #c4b5fd;
+}
+
+[contenteditable="true"]:focus {
+  outline: 1px dashed #c4b5fd;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+button {
+  border: none;
+  padding: 13px 23px;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(90deg, #713de3, #2563eb);
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #8060ff;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  color: #c084fc;
+  pointer-events: none;
+  animation: floatUp 7s linear forwards;
+  z-index: -1;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.ending {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #aaa;
+}
