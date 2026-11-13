@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  background: #080817;
+  background:maroon;
   overflow-x: hidden;
 }
 
@@ -94,20 +94,20 @@ button {
   padding: 13px 23px;
   border-radius: 30px;
   color: white;
-  background: linear-gradient(90deg, #713de3, #2563eb);
+  background: linear-gradient(90deg, orange, maroon;
   cursor: pointer;
   transition: .3s;
 }
 
 button:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px #8060ff;
+  box-shadow: 0 0 25px maroon;
 }
 
 .heart {
   position: fixed;
   bottom: -30px;
-  color: #c084fc;
+  color: maroon;
   pointer-events: none;
   animation: floatUp 7s linear forwards;
   z-index: -1;
